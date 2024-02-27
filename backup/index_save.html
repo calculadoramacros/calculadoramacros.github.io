@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculadora de Peso Corporal y Macros Semanales. Calcula tu peso ideal y recibe un cálculo personalizado de macros para alcanzar tus objetivos de salud y fitness.">
+    <meta name="keywords" content="calculadora de peso corporal, calcular macros, cálculo de macros, salud y fitness, nutrición, pérdida de peso, ganancia muscular">
+    <title>Calculadora de Peso Corporal y Macros Semanales - Calcula tu peso ideal y macros</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3DLSKPC14L"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKFBG9EFRQ');
+    </script>
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+     <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+             google_ad_client: "862-963-2788",
+             enable_page_level_ads: true
+         });
+     </script>
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9686564256673589"
+     crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+            color: #007bff;
+        }
+        p {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+        form {
+            text-align: center;
+        }
+        input[type="number"], select {
+            width: calc(100% - 40px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: calc(100% - 40px);
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        #resultado {
+            text-align: center;
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        #resultadoDieta {
+            margin-top: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Peso Corporal y Macros Semanales</h1>
+        <p>¿Quieres saber cuál es tu peso ideal y recibir un cálculo de macros personalizado?</p>
+        <form id="calculatorForm">
+            <label for="altura">Altura (cm):</label>
+            <input type="number" id="altura" name="altura" required><br>
+            <label for="peso">Peso (kg):</label>
+            <input type="number" id="peso" name="peso" required><br>
+            <label for="constitucion">Constitución:</label>
+            <select id="constitucion" name="constitucion">
+                <option value="normal">Normal</option>
+                <option value="delgada">Delgada</option>
+                <option value="robusta">Robusta</option>
+            </select><br>
+            <label for="genero">Género:</label>
+            <select id="genero" name="genero">
+                <option value="hombre">Hombre</option>
+                <option value="mujer">Mujer</option>
+            </select><br>
+            <label for="actividad">Nivel de Actividad:</label>
+            <select id="actividad" name="actividad">
+                <option value="sedentario">Sedentario</option>
+                <option value="ligera">Ligera (1-3 días/semana)</option>
+                <option value="moderada">Moderada (3-5 días/semana)</option>
+                <option value="intensa">Intensa (6-7 días/semana)</option>
+                <option value="muyIntensa">Muy intensa (2 veces al día, entrenamientos muy duros)</option>
+            </select><br>
+            <label for="objetivo">Objetivo:</label>
+            <select id="objetivo" name="objetivo">
+                <option value="perder">Perder Peso</option>
+                <option value="mantener">Mantener Peso</option>
+                <option value="ganar">Ganar Volumen</option>
+            </select><br>
+            <input type="submit" value="Calcular">
+        </form>
+        <div id="resultado"></div>
+        <div id="resultadoDieta"></div>
+    </div>
+    <footer>
+        <p>© 2024 Calculadora de Peso Corporal y Macros Semanales | Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+        document.getElementById('calculatorForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            calcularPesoIdeal();
+        });
+
+        function calcularPesoIdeal() {
+            var altura = parseFloat(document.getElementById('altura').value);
+            var peso = parseFloat(document.getElementById('peso').value);
+            var constitucion = document.getElementById('constitucion').value;
+            var genero = document.getElementById('genero').value;
+            var actividad = document.getElementById('actividad').value;
+            var objetivo = document.getElementById('objetivo').value;
+
+            if (altura > 0 && peso > 0) {
+                var pesoIdeal = calcularFormulaPesoIdeal(altura, peso, constitucion, genero);
+                var mensaje = "Tu peso ideal es de " + pesoIdeal.toFixed(2) + " kg.";
+                document.getElementById('resultado').innerText = mensaje;
+
+                var dietaSemanal = calcularDietaSemanal(pesoIdeal, actividad, objetivo);
+                var tablaDieta = generarTablaDieta(dietaSemanal);
+                document.getElementById('resultadoDieta').innerHTML = tablaDieta;
+            } else {
+                document.getElementById('resultado').innerText = "Por favor, introduce valores válidos.";
+                document.getElementById('resultadoDieta').innerHTML = "";
+            }
+        }
+
+        function calcularFormulaPesoIdeal(altura, peso, constitucion, genero) {
+            // Fórmula de peso ideal
+            var alturaMetros = altura / 100; // Convertir altura a metros
+            var pesoIdeal;
+
+            if (genero === "hombre") {
+                if (constitucion === "delgada") {
+                    pesoIdeal = (alturaMetros * 100 - 100) * 0.9;
+                } else if (constitucion === "robusta") {
+                    pesoIdeal = (alturaMetros * 100 - 100) * 1.1;
+                } else {
+                    pesoIdeal = (alturaMetros * 100 - 100);
+                }
+            } else if (genero === "mujer") {
+                if (constitucion === "delgada") {
+                    pesoIdeal = (alturaMetros * 100 - 100) * 0.85;
+                } else if (constitucion === "robusta") {
+                    pesoIdeal = (alturaMetros * 100 - 100) * 1.15;
+                } else {
+                    pesoIdeal = (alturaMetros * 100 - 100) * 0.9;
+                }
+            }
+            
+            return pesoIdeal;
+        }
+
+        function calcularDietaSemanal(pesoIdeal, actividad, objetivo) {
+            // Calcular necesidades calóricas diarias
+            var factorActividad = 0;
+            switch (actividad) {
+                case "sedentario":
+                    factorActividad = 1.2;
+                    break;
+                case "ligera":
+                    factorActividad = 1.375;
+                    break;
+                case "moderada":
+                    factorActividad = 1.55;
+                    break;
+                case "intensa":
+                    factorActividad = 1.725;
+                    break;
+                case "muyIntensa":
+                    factorActividad = 1.9;
+                    break;
+                default:
+                    break;
+            }
+
+            var caloriasDiarias;
+            if (objetivo === "perder") {
+                caloriasDiarias = pesoIdeal * 24 * factorActividad * 0.8;
+            } else if (objetivo === "mantener") {
+                caloriasDiarias = pesoIdeal * 24 * factorActividad;
+            } else if (objetivo === "ganar") {
+                caloriasDiarias = pesoIdeal * 24 * factorActividad * 1.2;
+            }
+
+            // Calcular distribución de macronutrientes
+            var proteinas = pesoIdeal * 2.2; // 2.2g/kg de peso corporal
+            var grasas = caloriasDiarias * 0.3 / 9; // 30% de calorías totales, 1g de grasa = 9 calorías
+            var carbohidratos = (caloriasDiarias - (proteinas * 4) - (grasas * 9)) / 4; // 4 calorías por gramo de carbohidratos
+
+            // Solo necesitas el consumo diario, así que simplemente devuelve los macronutrientes
+            return { "Proteínas": proteinas.toFixed(2), "Grasas": grasas.toFixed(2), "Carbohidratos": carbohidratos.toFixed(2) };
+        }
+
+        function generarTablaDieta(dietaDiaria) {
+            var tablaHTML = "<h2>Macro Diario</h2><table><tr><th></th><th>Gramos</th></tr>";
+            for (var macro in dietaDiaria) {
+                tablaHTML += "<tr>";
+                tablaHTML += "<td>" + macro + "</td>";
+                tablaHTML += "<td>" + dietaDiaria[macro] + "</td>";
+                tablaHTML += "</tr>";
+            }
+            tablaHTML += "</table>";
+            return tablaHTML;
+        }
+    </script>
+</body>
+</html>
