@@ -22,7 +22,8 @@
          });
      </script>
      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9686564256673589"
-     crossorigin="anonymous"></script>
+     crossorigin="anonymous">
+    </script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -163,6 +164,7 @@
 
                 var dietaSemanal = calcularDietaSemanal(pesoIdeal, actividad, objetivo);
                 var tablaDieta = generarTablaDieta(dietaSemanal);
+                var tablaDietaComidas = generarTablaDietaComidas(dietaSemanal)//hola chat gpt
                 document.getElementById('resultadoDieta').innerHTML = tablaDieta;
             } else {
                 document.getElementById('resultado').innerText = "Por favor, introduce valores válidos.";
