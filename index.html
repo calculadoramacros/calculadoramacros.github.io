@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Calculadora de Peso Corporal y Macros Semanales. Calcula tu peso ideal y recibe un cálculo personalizado de macros para alcanzar tus objetivos de salud y fitness.">
-    <meta name="keywords" content="calculadora de peso corporal, calcular macros, cálculo de macros, salud y fitness, nutrición, pérdida de peso, ganancia muscular">
+    <meta name="description" content="Calculadora de Peso Corporal y Macros Semanales. Calcula tu peso ideal y recibe un cálculo personalizado de macros para alcanzar tus objetivos de salud y fitness. Dieta, nutrición, pérdida de peso, ganancia muscular.">
+    <meta name="keywords" content="calculadora de peso corporal, calcular macros, cálculo de macros, salud y fitness, nutrición, pérdida de peso, ganancia muscular, dieta, recetas saludables, consejos de nutrición">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="logo.png">
     <title>Calculadora de Peso Corporal y Macros Semanales - Calcula tu peso ideal y macros</title>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3DLSKPC14L"></script>
     <script>
@@ -27,48 +29,67 @@
     </script>
 </head>
 <body>
+    <header class="header">
+        <img src="logo.png" alt="Logo de la calculadora" class="logo">
+        <h1 class="title">Calculadora de Peso Corporal y Macros Semanales</h1>
+    </header>
     <div class="container">
-        <h1>Calculadora de Peso Corporal y Macros Semanales</h1>
-        <p>¿Quieres saber cuál es tu peso ideal y recibir un cálculo de macros personalizado?</p>
-        <form id="calculatorForm">
-            <label for="altura">Altura (cm):</label>
-            <input type="number" id="altura" name="altura" required><br>
-            <label for="peso">Peso (kg):</label>
-            <input type="number" id="peso" name="peso" required><br>
-            <label for="constitucion">Constitución:</label>
-            <select id="constitucion" name="constitucion">
-                <option value="normal">Normal</option>
-                <option value="delgada">Delgada</option>
-                <option value="robusta">Robusta</option>
-            </select><br>
-            <label for="genero">Género:</label>
-            <select id="genero" name="genero">
-                <option value="hombre">Hombre</option>
-                <option value="mujer">Mujer</option>
-            </select><br>
-            <label for="actividad">Nivel de Actividad:</label>
-            <select id="actividad" name="actividad">
-                <option value="sedentario">Sedentario</option>
-                <option value="ligera">Ligera (1-3 días/semana)</option>
-                <option value="moderada">Moderada (3-5 días/semana)</option>
-                <option value="intensa">Intensa (6-7 días/semana)</option>
-                <option value="muyIntensa">Muy intensa (2 veces al día, entrenamientos muy duros)</option>
-            </select><br>
-            <label for="objetivo">Objetivo:</label>
-            <select id="objetivo" name="objetivo">
-                <option value="perder">Perder Peso</option>
-                <option value="mantener">Mantener Peso</option>
-                <option value="ganar">Ganar Volumen</option>
-            </select><br>
-            <input type="submit" value="Calcular">
+        <p class="description">¿Quieres saber cuál es tu peso ideal y recibir un cálculo de macros personalizado?</p>
+        <form id="calculatorForm" class="form">
+            <div class="form-group">
+                <label for="altura" class="label">Altura (cm):</label>
+                <input type="number" id="altura" name="altura" class="input" required>
+            </div>
+            <div class="form-group">
+                <label for="peso" class="label">Peso (kg):</label>
+                <input type="number" id="peso" name="peso" class="input" required>
+            </div>
+            <div class="form-group">
+                <label for="constitucion" class="label">Constitución:</label>
+                <select id="constitucion" name="constitucion" class="input">
+                    <option value="normal">Normal</option>
+                    <option value="delgada">Delgada</option>
+                    <option value="robusta">Robusta</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="genero" class="label">Género:</label>
+                <select id="genero" name="genero" class="input">
+                    <option value="hombre">Hombre</option>
+                    <option value="mujer">Mujer</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="actividad" class="label">Nivel de Actividad:</label>
+                <select id="actividad" name="actividad" class="input">
+                    <option value="sedentario">Sedentario</option>
+                    <option value="ligera">Ligera (1-3 días/semana)</option>
+                    <option value="moderada">Moderada (3-5 días/semana)</option>
+                    <option value="intensa">Intensa (6-7 días/semana)</option>
+                    <option value="muyIntensa">Muy intensa (2 veces al día, entrenamientos muy duros)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="objetivo" class="label">Objetivo:</label>
+                <select id="objetivo" name="objetivo" class="input">
+                    <option value="perder">Perder Peso</option>
+                    <option value="mantener">Mantener Peso</option>
+                    <option value="ganar">Ganar Volumen</option>
+                </select>
+            </div>
+            <input type="submit" value="Calcular" class="button">
         </form>
-        <div id="resultado"></div>
-        <div id="resultadoDieta"></div>
-        
+        <div id="resultado" class="result"></div>
+        <div id="resultadoDieta" class="result"></div>
+        <div id="resultadoDietaComidas" class="result"></div>
     </div>
 
-    <footer>
-        <p>© 2024 Calculadora de Peso Corporal y Macros Semanales | Todos los derechos reservados</p>
+    <footer class="footer">
+        <p class="copyright">© 2024 Calculadora de Peso Corporal y Macros Semanales | Todos los derechos reservados</p>
+        <details class="details">
+            <summary class="summary">¡Haz clic para ver un hecho interesante!</summary>
+            <p class="fact">Los plátanos son técnicamente bayas, pero las fresas no lo son.</p>
+        </details>
     </footer>
 
     <script src="scripts.js"></script>

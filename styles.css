@@ -1,38 +1,69 @@
+/* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
     color: #333;
 }
+
 .container {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
-h1, h2 {
+
+.header {
     text-align: center;
-    color: #007bff;
+    padding: 20px 0;
 }
-p {
+
+.logo {
+    max-width: 100px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.title {
+    color: #007bff;
+    margin-top: 10px;
+}
+
+.description {
     text-align: justify;
     margin-bottom: 20px;
 }
-form {
+
+.form {
     text-align: center;
 }
-input[type="number"], select {
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+}
+
+.input {
     width: calc(100% - 40px);
     padding: 10px;
-    margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
 }
-input[type="submit"] {
+
+.button {
     width: calc(100% - 40px);
     padding: 10px 20px;
     background-color: #007bff;
@@ -41,33 +72,62 @@ input[type="submit"] {
     border-radius: 4px;
     cursor: pointer;
     box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
-input[type="submit"]:hover {
+
+.button:hover {
     background-color: #0056b3;
+    color: #fff;
 }
-#resultado {
+
+.result {
     text-align: center;
     font-size: 24px;
     margin-top: 20px;
 }
-#resultadoDieta {
-    margin-top: 30px;
+
+.footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #777;
+    transition: margin-top 0.5s;
 }
+
+.footer:hover {
+    margin-top: 60px;
+}
+
+.details {
+    margin-top: 20px;
+}
+
+.summary {
+    cursor: pointer;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.curiosity {
+    margin-top: 20px;
+}
+
+/* Estilos para tablas */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
 }
+
 th, td {
     border: 1px solid #ccc;
     padding: 10px;
     text-align: center;
+    font-weight: bold;
+    font-size: 14px;
 }
+
 th {
     background-color: #f2f2f2;
-}
-footer {
-    text-align: center;
-    margin-top: 50px;
-    color: #777;
 }
