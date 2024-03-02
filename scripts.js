@@ -153,7 +153,53 @@ function generarTablaDietaComidas(dietaDiaria) {
         { nombre: "Barrita de cereales", tipo: "Snack", proteinas: 3, grasas: 8, carbohidratos: 20 },
         { nombre: "Galletas integrales con queso", tipo: "Snack", proteinas: 5, grasas: 10, carbohidratos: 25 },
         { nombre: "Hummus con pan pita", tipo: "Snack", proteinas: 6, grasas: 7, carbohidratos: 30 },
-        { nombre: "Popcorn casero", tipo: "Snack", proteinas: 2, grasas: 3, carbohidratos: 25 }
+        { nombre: "Popcorn casero", tipo: "Snack", proteinas: 2, grasas: 3, carbohidratos: 25 },
+        { nombre: "Smoothie bowl de frutas", tipo: "Desayuno", proteinas: 8, grasas: 5, carbohidratos: 40 },
+        { nombre: "Tortilla de espinacas y champiñones", tipo: "Desayuno", proteinas: 12, grasas: 8, carbohidratos: 10 },
+        { nombre: "Bagel con salmón ahumado", tipo: "Desayuno", proteinas: 20, grasas: 10, carbohidratos: 30 },
+        { nombre: "Pan integral con aguacate y huevo pochado", tipo: "Desayuno", proteinas: 15, grasas: 15, carbohidratos: 25 },
+        { nombre: "Tarta de manzana casera", tipo: "Desayuno", proteinas: 5, grasas: 10, carbohidratos: 35 },
+        { nombre: "Crepes con fresas y crema batida", tipo: "Desayuno", proteinas: 8, grasas: 12, carbohidratos: 40 },
+        { nombre: "Macedonia de frutas con yogur griego", tipo: "Desayuno", proteinas: 7, grasas: 3, carbohidratos: 25 },
+        { nombre: "Gachas de avena con frutos secos", tipo: "Desayuno", proteinas: 8, grasas: 10, carbohidratos: 35 },
+        { nombre: "Huevos benedictinos", tipo: "Desayuno", proteinas: 20, grasas: 15, carbohidratos: 20 },
+        { nombre: "Pan tostado con ricotta y miel", tipo: "Desayuno", proteinas: 10, grasas: 8, carbohidratos: 25 },
+
+        // Almuerzos adicionales
+        { nombre: "Wraps de pollo y aguacate", tipo: "Almuerzo", proteinas: 25, grasas: 15, carbohidratos: 30 },
+        { nombre: "Pollo al curry con arroz integral", tipo: "Almuerzo", proteinas: 30, grasas: 12, carbohidratos: 45 },
+        { nombre: "Ensalada de quinoa y vegetales asados", tipo: "Almuerzo", proteinas: 15, grasas: 8, carbohidratos: 35 },
+        { nombre: "Bistec a la parrilla con espárragos", tipo: "Almuerzo", proteinas: 35, grasas: 18, carbohidratos: 20 },
+        { nombre: "Risotto de champiñones", tipo: "Almuerzo", proteinas: 15, grasas: 10, carbohidratos: 50 },
+        { nombre: "Tortilla de patatas y cebolla", tipo: "Almuerzo", proteinas: 20, grasas: 15, carbohidratos: 30 },
+        { nombre: "Pasta con albóndigas en salsa de tomate", tipo: "Almuerzo", proteinas: 25, grasas: 12, carbohidratos: 40 },
+        { nombre: "Bowl de burrito vegetariano", tipo: "Almuerzo", proteinas: 20, grasas: 10, carbohidratos: 35 },
+        { nombre: "Pollo a la parrilla con ensalada de col", tipo: "Almuerzo", proteinas: 30, grasas: 10, carbohidratos: 20 },
+        { nombre: "Pasta con camarones al pesto", tipo: "Almuerzo", proteinas: 25, grasas: 12, carbohidratos: 45 },
+
+        // Cenas adicionales
+        { nombre: "Tortilla española con ensalada verde", tipo: "Cena", proteinas: 20, grasas: 15, carbohidratos: 25 },
+        { nombre: "Salmón al horno con espárragos", tipo: "Cena", proteinas: 30, grasas: 15, carbohidratos: 20 },
+        { nombre: "Pasta con salsa de champiñones y espinacas", tipo: "Cena", proteinas: 18, grasas: 12, carbohidratos: 40 },
+        { nombre: "Quiche de espinacas y queso", tipo: "Cena", proteinas: 15, grasas: 20, carbohidratos: 30 },
+        { nombre: "Tacos de pescado con guacamole", tipo: "Cena", proteinas: 25, grasas: 15, carbohidratos: 30 },
+        { nombre: "Lasaña de vegetales", tipo: "Cena", proteinas: 20, grasas: 12, carbohidratos: 35 },
+        { nombre: "Estofado de pollo con verduras", tipo: "Cena", proteinas: 25, grasas: 10, carbohidratos: 20 },
+        { nombre: "Ratatouille al horno", tipo: "Cena", proteinas: 10, grasas: 8, carbohidratos: 25 },
+        { nombre: "Pavo al horno con batatas asadas", tipo: "Cena", proteinas: 30, grasas: 12, carbohidratos: 35 },
+        { nombre: "Sopa de tomate casera", tipo: "Cena", proteinas: 5, grasas: 3, carbohidratos: 15 },
+
+        // Snacks adicionales
+        { nombre: "Tostadas integrales con aguacate", tipo: "Snack", proteinas: 5, grasas: 10, carbohidratos: 20 },
+        { nombre: "Batido verde detox", tipo: "Snack", proteinas: 5, grasas: 3, carbohidratos: 30 },
+        { nombre: "Huevos rellenos de atún", tipo: "Snack", proteinas: 15, grasas: 10, carbohidratos: 5 },
+        { nombre: "Bolitas de energía de frutos secos", tipo: "Snack", proteinas: 5, grasas: 10, carbohidratos: 20 },
+        { nombre: "Rodajas de pepino con hummus", tipo: "Snack", proteinas: 3, grasas: 5, carbohidratos: 10 },
+        { nombre: "Smoothie de proteínas de vainilla", tipo: "Snack", proteinas: 20, grasas: 5, carbohidratos: 15 },
+        { nombre: "Gazpacho casero", tipo: "Snack", proteinas: 3, grasas: 2, carbohidratos: 10 },
+        { nombre: "Queso cottage con frutas", tipo: "Snack", proteinas: 10, grasas: 5, carbohidratos: 15 },
+        { nombre: "Tostadas de pan integral con queso ricotta y tomate", tipo: "Snack", proteinas: 8, grasas: 10, carbohidratos: 20 },
+        { nombre: "Helado de yogur casero", tipo: "Snack", proteinas: 5, grasas: 8, carbohidratos: 30 }
         // Agrega más platos completos según sea necesario
     ];
     

@@ -181,19 +181,41 @@ table {
     margin-top: 20px;
     border-radius: 8px;
     overflow: hidden;
+    border: 1px solid #ccc; /* Cambiado el estilo del borde */
 }
 
 th, td {
-    border: 1px solid #ddd; /* Cambiado el color del borde */
-    padding: 12px; /* Aumentado el padding para mayor espacio entre el texto y el borde */
+    border: 1px solid #ccc;
+    padding: 12px;
     text-align: center;
     font-weight: bold;
     font-size: 14px;
 }
 
 th {
-    background-color: #000000; /* Cambiado el color de fondo del encabezado */
+    background-color: #007bff; /* Cambiado el color de fondo del encabezado */
     color: #fff; /* Cambiado el color del texto en el encabezado */
+}
+
+/* Estilo alternativo para filas pares */
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Cambiado el color de fondo de las filas pares */
+}
+
+/* Estilo al hacer hover sobre las filas */
+tr:hover {
+    background-color: #ddd; /* Cambiado el color de fondo al hacer hover */
+}
+
+/* Estilo para la tabla dentro del footer */
+.footer table {
+    margin-top: 30px; /* Aumentado el espacio entre la tabla y el contenido superior */
+}
+
+/* Estilo para el texto dentro de las celdas */
+th, td {
+    font-size: 16px; /* Aumentado el tamaño del texto en las celdas */
+    color: #333; /* Cambiado el color del texto en las celdas */
 }
 
 /* Animación de entrada para el contenedor principal */
