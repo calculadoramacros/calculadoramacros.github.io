@@ -164,7 +164,7 @@
 
                 var dietaSemanal = calcularDietaSemanal(pesoIdeal, actividad, objetivo);
                 var tablaDieta = generarTablaDieta(dietaSemanal);
-                var tablaDietaComidas = generarTablaDietaComidas(dietaSemanal)//hola chat gpt
+                var tablaDietaComidas = generarTablaDietaComidas(dietaSemanal)//hola chat gpt 
                 document.getElementById('resultadoDieta').innerHTML = tablaDieta;
             } else {
                 document.getElementById('resultado').innerText = "Por favor, introduce valores válidos.";
@@ -240,7 +240,7 @@
         }
 
         function generarTablaDieta(dietaDiaria) {
-            var tablaHTML = "<h2>Macro Diario</h2><table><tr><th></th><th>Gramos</th></tr>";
+            var tablaHTML = "<h2>Macros Diario</h2><table><tr><th></th><th>Gramos</th></tr>";
             for (var macro in dietaDiaria) {
                 tablaHTML += "<tr>";
                 tablaHTML += "<td>" + macro + "</td>";
